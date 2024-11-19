@@ -2,6 +2,8 @@
 import streamlit as st
 import pandas as pd 
 
+st.title('Flujo de fondos')
+
 # Dataset de VE
 # df_autos = pd.read_csv("df_modelo.csv") # Dataset de VE
 df_autos = pd.read_csv('datasets/2. Depurados/ElectricCarData_Clean.csv')
@@ -241,8 +243,8 @@ def calcular_metricas_flota(cantidad_ve, cantidad_conv):
     return df_resultados
 
 # Crear un selector para la industria
-cantidad_ve = st.slider("Seleccione cantidad de autos eléctricos:",min_value=0, max_value=2000, step=1)
-cantidad_conv = st.slider("Seleccione cantidad de autos convencionales:",min_value=0, max_value=2000, step=1)
+cantidad_ve = st.slider("Seleccione cantidad de autos eléctricos:",min_value=0, max_value=1500, step=1)
+cantidad_conv = st.slider("Seleccione cantidad de autos convencionales:",min_value=0, max_value=1500, step=1)
 
 resultados_flota = calcular_metricas_flota(cantidad_ve,cantidad_conv)
 
