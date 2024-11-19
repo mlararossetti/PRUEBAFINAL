@@ -103,7 +103,7 @@ pagina5 = st.Page(
      icon = '🌎')
 
 pagina6 = st.Page(
-    page = 'Streamlit/pagina6.py',
+    page = 'pagina6.py',
     title ='Análsis Financiero',
     icon = '📈'
 )
