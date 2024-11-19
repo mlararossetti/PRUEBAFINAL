@@ -75,30 +75,30 @@ st.markdown(
 # Páginas
 
 pagina1 = st.Page(
-    page = 'Streamlit/pagina1.py',
+    page = 'pagina1.py',
     title = 'Home',
     icon = '📦', 
     default= True,)
 
 pagina2 = st.Page(
-     page = 'Streamlit/pagina2.py',
+     page = 'pagina2.py',
      title = 'Modelos de predicción',
      icon = '📈')
 
 
 pagina3 = st.Page(
-     page = 'Streamlit/pagina3.py',
+     page = 'pagina3.py',
      title = 'Análisis Temporal y por Industria',
      icon = '🚖')
 
 
 pagina4 = st.Page(
-     page = 'Streamlit/pagina4.py',
+     page = 'pagina4.py',
      title = 'Análisis Georreferencial de Viajes',
      icon = '🗺️')
 
 pagina5 = st.Page(
-     page = 'Streamlit/pagina5.py',
+     page = 'pagina5.py',
      title = 'Análisis Impacto Ambiental',
      icon = '🌎')
 
