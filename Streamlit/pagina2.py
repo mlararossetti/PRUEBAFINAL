@@ -166,16 +166,18 @@ def graficar_predicción(df_prophet, column_name, forecast, industry_type):
 
     # Mostrar gráfico
     st.plotly_chart(fig)
-    
     # Seleccionar y renombrar las columnas
     forecast_df = forecast[['ds', 'yhat']].rename(columns={'ds': 'Fecha', 'yhat': column_name})
-    df_rounded = forecast_df.round().astype(int)
-    df_formatted = df_rounded.applymap(lambda x: f'{x:,}'.replace(',', '.'))
 
+    # Redondear los valores y convertir a enteros
+    forecast_df[column_name] = forecast_df[column_name].round().astype(int)
+
+    # Formatear los números con separadores de miles
+    forecast_df[column_name] = forecast_df[column_name].apply(lambda x: f'{x:,}'.replace(',', '.'))
 
     # Mostrar el DataFrame resultante
     st.write("Tabla de Predicciones:")
-    st.dataframe(df_formatted)
+    st.dataframe(forecast_df)
 
 
 # Función para obtener el nombre del archivo del modelo
