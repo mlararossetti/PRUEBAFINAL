@@ -104,11 +104,17 @@ pagina5 = st.Page(
 
 pagina6 = st.Page(
     page = 'pagina6.py',
-    title ='Análsis Financiero',
+    title ='Análisis Financiero',
     icon = '📈'
 )
 
-pg = st.navigation(pages=[pagina1, pagina2, pagina3, pagina4, pagina5,pagina6])
+pagina7 = st.Page(
+    page = 'pagina7.py',
+    title ='Flujo de fondos proyectado',
+    icon = '💵'
+)
+
+pg = st.navigation(pages=[pagina1, pagina2, pagina3, pagina4, pagina5,pagina6,pagina7])
 pg.run()
 
 
