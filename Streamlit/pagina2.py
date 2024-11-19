@@ -77,7 +77,7 @@ df['date'] = pd.to_datetime(df['date'])
 # Widgets de Streamlit
 # Selección de la industria
 # Cargar los parámetros
-df_params = pd.read_csv("Modelos de ML\mejores_modelos.csv")
+df_params = pd.read_csv("Modelos de ML/mejores_modelos.csv")
 
 # Crear un selector para la industria
 industry_type = df_params['industry'].unique()
