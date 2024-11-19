@@ -58,7 +58,7 @@ st.title('Modelo de Machine Learning')
 st.subheader('Series de tiempo')
 
 st.markdown("""
-En esta página, podrás explorar las predicciones futuras para varias variables clave dentro de la industria de taxis, tanto para taxis verdes como amarillos. Las predicciones incluyen:
+En esta página, podrás explorar las predicciones futuras para distintas variables dentro de la industria de taxis de Nueva York, separando por Yellow, Green, FH - Otros y FHV. Las predicciones incluyen:
 
 - **Cantidad de vehículos (unique_vehicles)**: Estimación de la cantidad de vehículos activos en la flota.
 - **Tarifa Total (total_amount)**: Pronóstico de la tarifa total diaria.
@@ -67,7 +67,10 @@ En esta página, podrás explorar las predicciones futuras para varias variables
 - **Viajes Totales (total_trips)**: Predicción del número total de viajes realizados por día, proporcionando una visión general de la actividad en la flota.
 - **Emisiones de CO2 (total_co2_emission)**: Estimación de las emisiones de dióxido de carbono generadas por los vehículos.
 
-Estas predicciones se pueden utilizar para anticipar las tendencias del sector y ayudar a tomar decisiones informadas, tanto para la gestión operativa de los taxis como para la optimización de la flota y la reducción del impacto ambiental.            
+Estas proyecciones te permitirán:
+- **Anticipar las tendencias del sector**, comprendiendo las fluctuaciones futuras de la flota.
+- **Tomar decisiones informadas**, tanto para la **gestión operativa** de los taxis como para la **optimización de la flota**.
+- **Reducir el impacto ambiental** al conocer las emisiones de CO2 y trabajar en estrategias para minimizar el daño ecológico.
 
 """)
 # Cargar los datos
