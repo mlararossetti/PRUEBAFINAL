@@ -248,6 +248,11 @@ cantidad_conv = st.slider("Seleccione cantidad de autos convencionales:",min_val
 
 resultados_flota = calcular_metricas_flota(cantidad_ve,cantidad_conv)
 
+st.markdown(f"""
+En esta tabla se muestran los 5 mejores modelos de vehículos eléctricos en función a su rentabilidad.
+A su vez se calculan distintas métricas como ROI%, IR(USD), Payback Period (Años) y Flujo Neto Total (USD) para la combinación de {cantidad_ve} vehículos eléctricos y {cantidad_conv} vehículos convencionales. 
+            """)
+
 # Mostrar el DataFrame resultante
 st.write("Tabla de Resultados:")
 # Mostrar el DataFrame resultante
