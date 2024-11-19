@@ -63,7 +63,6 @@ En esta página, podrás explorar las predicciones futuras para distintas variab
 - **Cantidad de vehículos (unique_vehicles)**: Estimación de la cantidad de vehículos activos en la flota.
 - **Tarifa Total (total_amount)**: Pronóstico de la tarifa total diaria.
 - **Distancia Promedio (avg_trip_distance)**: Estimación de la distancia promedio recorrida por cada viaje.
-- **Horas Promedio por Chofer (avg_hours_per_day_per_driver)**: Proyección de las horas totales que los choferes trabajarán cada día, basándose en el total de viajes.
 - **Viajes Totales (total_trips)**: Predicción del número total de viajes realizados por día, proporcionando una visión general de la actividad en la flota.
 - **Emisiones de CO2 (total_co2_emission)**: Estimación de las emisiones de dióxido de carbono generadas por los vehículos.
 
@@ -170,10 +169,13 @@ def graficar_predicción(df_prophet, column_name, forecast, industry_type):
     
     # Seleccionar y renombrar las columnas
     forecast_df = forecast[['ds', 'yhat']].rename(columns={'ds': 'Fecha', 'yhat': column_name})
+    df_rounded = forecast_df.round().astype(int)
+    df_formatted = df_rounded.applymap(lambda x: f'{x:,}'.replace(',', '.'))
+
 
     # Mostrar el DataFrame resultante
     st.write("Tabla de Predicciones:")
-    st.dataframe(forecast_df)
+    st.dataframe(df_formatted)
 
 
 # Función para obtener el nombre del archivo del modelo
@@ -194,7 +196,7 @@ def cargar_o_entrenar_modelo(df_prophet, industry_type, column_name, cps, sps, s
     
     #Intentar cargar el modelo si ya existe
     if os.path.exists(modelo_path):
-         st.write(f"Cargando modelo desde {modelo_path}...")
+         #st.write(f"Cargando modelo desde {modelo_path}...")
          model = joblib.load(modelo_path)
     
     else: 
