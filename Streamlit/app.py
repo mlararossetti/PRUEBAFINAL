@@ -6,7 +6,7 @@ import streamlit as st
 st.set_page_config(page_title="Inicio", layout="wide")
 
 # Agregar la imagen en la parte superior de la barra lateral
-st.sidebar.image("Logo PNG WHITE.png", use_container_width=True)
+st.sidebar.image("Streamlit/Logo PNG BLACK.png", use_container_width=True)
 
 
 # Incrustar CSS para personalizar estilos, incluyendo el menú lateral
