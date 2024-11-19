@@ -26,7 +26,7 @@ st.markdown(
      ### Nuestro equipo
     """)
 # Mostrar la imagen cargada
-st.image("Images/Nuestro Equipo.png", use_container_width=True)
+st.image("Images/Nuestro equipo.png", use_container_width=True)
 
 st.markdown(
     """
