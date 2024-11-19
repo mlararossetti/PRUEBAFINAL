@@ -77,7 +77,7 @@ df['date'] = pd.to_datetime(df['date'])
 # Widgets de Streamlit
 # Selección de la industria
 # Cargar los parámetros
-df_params = pd.read_csv(r"mejores_modelos.csv")
+df_params = pd.read_csv("Modelos de ML\mejores_modelos.csv")
 
 # Crear un selector para la industria
 industry_type = df_params['industry'].unique()
@@ -176,7 +176,7 @@ def graficar_predicción(df_prophet, column_name, forecast, industry_type):
 # Función para obtener el nombre del archivo del modelo
 def obtener_nombre_archivo(industry_type, column_name):
     """Genera un nombre de archivo único para una combinación de industria y columna."""
-    return f"/mount/src/prueba/Modelos de ML/models/prophet_model_{industry_type}_{column_name}.pkl"
+    return f"Modelos de ML/models/prophet_model_{industry_type}_{column_name}.pkl"
 
 # Función para cargar o entrenar un modelo Prophet
 def cargar_o_entrenar_modelo(df_prophet, industry_type, column_name, cps, sps, sm):
@@ -250,7 +250,7 @@ def pronóstico_con_grid_search(df_prophet, df_params, industry_type, column_nam
 
 
 # Configuración y ejecución principal
-df_params = pd.read_csv(r"mejores_modelos.csv")
+df_params = pd.read_csv('Modelos de ML/mejores_modelos.csv')
 
 periodos = selected_periods
 frecuencia = "MS"

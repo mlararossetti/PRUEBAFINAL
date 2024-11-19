@@ -6,7 +6,7 @@ import streamlit as st
 st.set_page_config(page_title="Inicio", layout="wide")
 
 # Agregar la imagen en la parte superior de la barra lateral
-st.sidebar.image("Streamlit/Logo PNG BLACK.png", use_container_width=True)
+st.sidebar.image("Images/Logo PNG BLACK.png", use_container_width=True)
 
 
 # Incrustar CSS para personalizar estilos, incluyendo el menú lateral
@@ -75,35 +75,35 @@ st.markdown(
 # Páginas
 
 pagina1 = st.Page(
-    page = 'pagina1.py',
+    page = 'Streamlit/pagina1.py',
     title = 'Home',
     icon = '📦', 
     default= True,)
 
 pagina2 = st.Page(
-     page = 'pagina2.py',
+     page = 'Streamlit/pagina2.py',
      title = 'Modelos de predicción',
      icon = '📈')
 
 
 pagina3 = st.Page(
-     page = 'pagina3.py',
+     page = 'Streamlit/pagina3.py',
      title = 'Análisis Temporal y por Industria',
      icon = '🚖')
 
 
 pagina4 = st.Page(
-     page = 'pagina4.py',
+     page = 'Streamlit/pagina4.py',
      title = 'Análisis Georreferencial de Viajes',
      icon = '🗺️')
 
 pagina5 = st.Page(
-     page = 'pagina5.py',
+     page = 'Streamlit/pagina5.py',
      title = 'Análisis Impacto Ambiental',
      icon = '🌎')
 
 pagina6 = st.Page(
-    page = 'pagina6.py',
+    page = 'Streamlit/pagina6.py',
     title ='Análsis Financiero',
     icon = '📈'
 )

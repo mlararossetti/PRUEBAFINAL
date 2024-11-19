@@ -5,7 +5,7 @@ st.title("Bienvenidos a DataBox")
 col1, col2 = st.columns(2, gap='small', vertical_alignment='center')
 
 with col1:
-    st.image('Logo PNG BLACK.png', width= 300)
+    st.image('Images/Logo PNG BLACK.png', width= 300)
 
 with col2:
     st.header('¿Quiénes somos y qué hacemos?', anchor=False)
@@ -26,14 +26,14 @@ st.markdown(
      ### Nuestro equipo
     """)
 # Mostrar la imagen cargada
-st.image("Nuestro Equipo.png", use_container_width=True)
+st.image("Images/Nuestro Equipo.png", use_container_width=True)
 
 st.markdown(
     """
      ### Proyecto de trabajo
     """)
 # Mostrar la imagen cargada
-st.image("Portada Readme.png", use_container_width=True)
+st.image("Images/Portada Readme.png", use_container_width=True)
 
 st.subheader("Contacto")
 st.write(
@@ -45,4 +45,4 @@ st.write(
 )
 
 # Mostrar la imagen cargada
-st.image("Pie.png", use_container_width=True)
+st.image("Images/Pie.png", use_container_width=True)
