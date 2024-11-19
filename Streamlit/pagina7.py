@@ -4,7 +4,7 @@ import pandas as pd
 
 # Dataset de VE
 # df_autos = pd.read_csv("df_modelo.csv") # Dataset de VE
-df_autos = pd.read_csv(r'datasets\2. Depurados\ElectricCarData_Clean.csv')#"df_modelo.csv")
+df_autos = pd.read_csv('datasets\2. Depurados\ElectricCarData_Clean.csv')#"df_modelo.csv")
 df_autos.rename(columns={
     'model': 'Model',
     'efficiency_whkm': 'Efficiency (Wh/km)'
@@ -14,7 +14,7 @@ df_autos['Efficiency (kWh/mile)'] = df_autos['Efficiency (Wh/km)']/1000* 0.16886
 df_autos['Precio Dolar'] = df_autos['price_euro'] * 1.06
 
 #future_data = pd.read_csv(r"Prediccion_Dataset.csv", index_col = 0) # Resultados del modelo ML (pronostico a 5 años)
-future_data = pd.read_csv(r"..\datasets\2. Depurados\TLC Aggregated Data\ML_TS_Output_Anualized.csv")
+future_data = pd.read_csv('datasets\2. Depurados\TLC Aggregated Data\ML_TS_Output_Anualized.csv')
 future_data = future_data[future_data['industry']=='FHV - High Volume']
 
 future_data.rename(columns={
