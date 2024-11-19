@@ -20,7 +20,7 @@ Asimismo, en el sector derecho del dashboard, se muestra un apartado interactivo
 )
 
 # URL del dashboard de Power BI
-power_bi_url = "https://app.powerbi.com/reportEmbed?reportId=40ae8e80-3626-4c2f-a74b-85b823c6fd91&autoAuth=true&ctid=92e27384-b6b0-4b13-9ee8-1d8f6db9c7f5"
+power_bi_url = "https://app.powerbi.com/view?r=eyJrIjoiZmZmYzQ3NDgtOTI3MC00MDg0LWI2NDUtOTAxYWVlMThjZDU5IiwidCI6IjkyZTI3Mzg0LWI2YjAtNGIxMy05ZWU4LTFkOGY2ZGI5YzdmNSJ9"
 
 # Inserta el iframe como HTML
 iframe_html = f"""
