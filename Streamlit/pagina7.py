@@ -278,13 +278,5 @@ A su vez se calculan distintas métricas como Efficiency (kWh/mile), Inversión 
 # Mostrar el DataFrame resultante
 df5 = resultados_flota.head(5)
 # Asegurarse de que todas las columnas sean numéricas (o NaN si no se pueden convertir)
-df5 = df5.apply(pd.to_numeric, errors='coerce')
-# Aplicar el formato a todas las columnas
-for col in df5.columns:
-    if df5[col].dtype in ['float64', 'int64']:
-        df5[col] = df5[col].apply(
-            lambda x: f'{x:,.2f}'.replace(',', 'TEMP').replace('.', ',').replace('TEMP', '.')
-            if pd.notnull(x) else x
-        )
 st.dataframe(df5)
 
