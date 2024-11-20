@@ -277,5 +277,6 @@ A su vez se calculan distintas métricas como Efficiency (kWh/mile), Inversión 
             """)
 # Mostrar el DataFrame resultante
 df5 = resultados_flota.head(5) 
+df5= df5.apply(lambda x: f'{x:,}'.replace(',', '.'))
 st.dataframe(df5)
 

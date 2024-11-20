@@ -174,6 +174,8 @@ def graficar_predicción(df_prophet, column_name, forecast, industry_type):
 
     # Formatear los números con separadores de miles
     forecast_df[column_name] = forecast_df[column_name].apply(lambda x: f'{x:,}'.replace(',', '.'))
+    forecast_df['Fecha'] = forecast_df['Fecha'].dt.strftime('%m-%Y')
+
 
     # Mostrar el DataFrame resultante
     st.write("Tabla de Predicciones:")
