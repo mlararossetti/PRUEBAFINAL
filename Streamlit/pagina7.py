@@ -276,7 +276,10 @@ En esta tabla se muestran los 5 mejores modelos de vehículos eléctricos en fun
 A su vez se calculan distintas métricas como Efficiency (kWh/mile), Inversión Inicial Total (USD), VNA(USD), TIR (%), ROI%, ROI% mensualizado, IR(USD) y Payback Period (Años) para la combinación de {cantidad_ve} vehículos eléctricos y {cantidad_conv} vehículos convencionales. 
             """)
 # Mostrar el DataFrame resultante
-df5 = resultados_flota.head(5) 
-df5= df5.apply(lambda x: f'{x:,}'.replace(',', '.'))
+df5 = resultados_flota.head(5)
+# Asegurarse de que todas las columnas sean numéricas (o NaN si no se pueden convertir)
+df5 = df5.apply(pd.to_numeric, errors='coerce')
+# Aplicar el formato a todas las columnas
+df5 = df5.applymap(lambda x: f'{x:,.2f}'.replace(',', '.') if pd.notnull(x) else x)
 st.dataframe(df5)
 
