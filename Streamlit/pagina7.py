@@ -280,6 +280,9 @@ df5 = resultados_flota.head(5)
 # Asegurarse de que todas las columnas sean numéricas (o NaN si no se pueden convertir)
 df5 = df5.apply(pd.to_numeric, errors='coerce')
 # Aplicar el formato a todas las columnas
-df5 = df5.applymap(lambda x: f'{x:,.2f}'.replace('.', ',').replace(',', '.') if pd.notnull(x) else x)
+df5['columna'] = df5['columna'].apply(
+    lambda x: f'{x:,.2f}'.replace(',', 'TEMP').replace('.', ',').replace('TEMP', '.')
+    if pd.notnull(x) else x
+)
 st.dataframe(df5)
 
