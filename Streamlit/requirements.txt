@@ -10,3 +10,4 @@ joblib
 plotly
 prophet
 joblib
+numpy_financial
