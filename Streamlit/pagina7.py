@@ -276,7 +276,16 @@ En esta tabla se muestran los 5 mejores modelos de vehículos eléctricos en fun
 A su vez se calculan distintas métricas como Efficiency (kWh/mile), Inversión Inicial Total (USD), VNA(USD), TIR (%), ROI%, ROI% mensualizado, IR(USD) y Payback Period (Años) para la combinación de {cantidad_ve} vehículos eléctricos y {cantidad_conv} vehículos convencionales. 
             """)
 # Mostrar el DataFrame resultante
+
 df5 = resultados_flota.head(5)
-# Asegurarse de que todas las columnas sean numéricas (o NaN si no se pueden convertir)
+df5['Inversión Inicial Total (USD)'] = df5['Inversión Inicial Total (USD)'].apply(lambda x: f'{x:,}'.replace(',', '.'))
+df5['VNA (USD)'] = df5['VNA (USD)'].apply(lambda x: f'{x:,}'.replace(',', '.'))
+df5['VNA (USD)'] = df5['VNA (USD)'].apply(lambda x: f'{x:,}'.replace(',', '.'))
+df5['TIR (%)'] = df5['TIR (%)'].apply(lambda x: f'{x:,}'.replace(',', '.'))
+df5['ROI (%)'] = df5['ROI (%)'].apply(lambda x: f'{x:,}'.replace(',', '.'))
+df5['ROI Mensualizado(%)'] = df5['ROI Mensualizado(%)'].apply(lambda x: f'{x:,}'.replace(',', '.'))
+df5['IR (USD)'] = df5['IR (USD)'].apply(lambda x: f'{x:,}'.replace(',', '.'))
+
+
 st.dataframe(df5)
 
